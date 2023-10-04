@@ -1,0 +1,78 @@
+/\ program1
+
+function min:
+
+  /\ reading var
+  [nr1]
+  [nr2]
+  [nr3]
+  
+  /\ : - means print
+  :nr , nr in nr1, nr2, nr3 , nr <
+
+function max:
+
+  /\ reading var
+  [nr1]
+  [nr2]
+  [nr3]
+  
+  /\ : - means print
+  :nr , nr in nr1, nr2, nr3 , nr >
+
+
+
+/\ program2
+
+function prime:
+
+  [nr] 
+
+  nr in 0, 1 return 'no'
+
+  for each n in ~2, nr - 1~:
+    ? nr % n is 0 => return 'no'
+
+  return 'yes'
+
+
+function gcd2:
+
+  [nr1]
+  [nr2]
+
+  while nr1 % nr2 !is 0:
+      1? nr1 < nr2 => nr1 = nr2 % nr1
+      2? nr2 < nr1 => nr2 = nr1 % nr2
+
+  return nr1
+
+function ecuation(a, b, c):
+
+  :(-b + sq(b^2 - 4*a*c)/2*a
+  :(-b - sq(b^2 - 4*a*c)/2*a
+
+
+/\ program 3
+  
+function sum(~n1,,nn~):
+
+  :sum, sum is sum + nr, for each nr in ~n1,,nn~
+
+function maxN(~n1,,nn~):
+  :nr , nr in ~n1,,nn~ , nr >
+
+function minN(~n1,,nn~):
+  :nr , nr in ~n1,,nn~ , nr <
+
+
+/\p1err program
+
+funtion hei:
+  retur ''
+
+
+
+
+
+
