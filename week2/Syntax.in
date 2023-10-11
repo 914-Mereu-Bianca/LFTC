@@ -16,5 +16,5 @@ if_statement ::= "if" "(" condition ")" "{" {statement} "}" ["else" "{" {stateme
 condition ::= expression ("=="|"<"|"<="|">"|">=") expression
 while_statement ::= "while" "(" condition ")" "{" {statement} "}"
 return_statement ::= "return" expression
-function_call_statement ::= function_name "(" expression_list? ")"
+function_call_statement ::= function_name "(" [expression_list] ")"
 function_name ::= "print" | "read_int" | "read_string"
