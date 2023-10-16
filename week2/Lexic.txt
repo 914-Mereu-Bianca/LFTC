@@ -4,7 +4,7 @@ a-z, A-Z, _, 0-9
 
 Lexic:
 
-operators: + - * / == < <= > >= =
+operators: + - * / == < <= > >= = " //
 separators: {} () [] ; space newline  
 reserved words: var if print read_int read_string else while return
 
