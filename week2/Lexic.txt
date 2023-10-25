@@ -4,7 +4,7 @@ a-z, A-Z, _, 0-9
 
 Lexic:
 
-operators: + - * / == < <= > >= =
+operators: + - * / == < <= > >= = " //
 separators: {} () [] ; space newline  
 reserved words: var if print read_int read_string else while return
 
@@ -16,3 +16,5 @@ int_constant = ["+"|"-"] non_zero_digit {digit} | "0"
 non_zero_digit = "1"|"2"|..|"9"
 
 string_constant = """{letter|digit|"_"|" "}"""
+
+special_constant = "*"|"%"|"$"|"!"|"@"|"#"|...
