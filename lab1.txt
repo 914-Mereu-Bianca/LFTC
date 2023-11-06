@@ -1,72 +1,73 @@
-/\ program1
+# program1
+program {
 
-function min:
-
-  /\ reading var
-  [nr1]
-  [nr2]
-  [nr3]
+  nr1 (int), nr2 (int), nr3 (int);
+  # reading var
+  read(nr1);
+  read(nr2);
+  read(nr3);
   
-  /\ : - means print
-  :nr , nr in nr1, nr2, nr3 , nr <
-
-function max:
-
-  /\ reading var
-  [nr1]
-  [nr2]
-  [nr3]
+  # comparing nrs
+  min (int) = nr1;
   
-  /\ : - means print
-  :nr , nr in nr1, nr2, nr3 , nr >
+  if min > nr2 {
+    min = nr2;
+  }
+  if min > nr3 {
+    min = nr3;
+  }
 
+  print(min);
 
+}
 
-/\ program2
-
-function prime:
-
-  [nr] 
-
-  nr in 0, 1 return 'no'
-
-  for each n in ~2, nr - 1~:
-    ? nr % n is 0 => return 'no'
-
-  return 'yes'
-
-
-function gcd2:
-
-  [nr1]
-  [nr2]
-
-  while nr1 % nr2 !is 0:
-      1? nr1 < nr2 => nr1 = nr2 % nr1
-      2? nr2 < nr1 => nr2 = nr1 % nr2
-
-  return nr1
-
-function ecuation(a, b, c):
-
-  :(-b + sq(b^2 - 4*a*c)/2*a
-  :(-b - sq(b^2 - 4*a*c)/2*a
-
-
-/\ program 3
+# program2
+program {
   
-function sum(~n1,,nn~):
+  nr1 (int), nr2 (int), nr3 (int);
 
-  :sum, sum is sum + nr, for each nr in ~n1,,nn~
+  print("nr1=");
+  read(nr1);
+  print("nr2=");
+  read(nr2);
+  print("nr3=");
+  read(nr3);
+  delta (int) = nr2*nr2 - 4*nr1*nr3;
+  sol1 (real), sol2 (real);
+  if delta < 0 {
+	print("No real solutions.");
+  }
+  if delta = 0 {
+	sol1 = (-nr2)/(2*nr1);
+	print("Unique solution ");
+	print(sol1);
+  }
+  sol1 = ((-nr2)-(square(delta)))/(2*nr1);
+  sol2 = ((-nr2)+(square(delta)))/(2*nr1);
+  print("2 solutions ");
+  print(sol1);
+  print(" and ");
+  print(sol2);
+}
 
-function maxN(~n1,,nn~):
-  :nr , nr in ~n1,,nn~ , nr >
+#program 3
+  
+program {
+n (int), number (int);
+print("How many numbers do you want to sum?\n");
+read(n);
+sum (int) = 0;
+index (int) = 1;
+while index <= n {
+	read(number);
+	sum = sum + number;
+}
+print("The sum is");
+print(sum);
+}
 
-function minN(~n1,,nn~):
-  :nr , nr in ~n1,,nn~ , nr <
 
-
-/\p1err program
+#p1err program
 
 funtion hei:
   retur ''

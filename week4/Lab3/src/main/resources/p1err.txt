@@ -1,0 +1,7 @@
+program {
+
+  nr1 (int), 4nr2 (int), nr3 (int);
+
+  print(min);
+
+}

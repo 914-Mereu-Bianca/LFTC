@@ -1,0 +1,26 @@
+program {
+nr1 (int), nr2 (int), nr3 (int);
+
+print("nr1=");
+read(nr1);
+print("nr2=");
+read(nr2);
+print("nr3=");
+read(nr3);
+delta (int) = nr2*nr2 - 4*nr1*nr3;
+sol1 (real), sol2 (real);
+if delta < 0 {
+	print("No real solutions.");
+}
+if delta = 0 {
+	sol1 = (-nr2)/(2*nr1);
+	print("Unique solution ");
+	print(sol1);
+}
+sol1 = ((-nr2)-(square(delta)))/(2*nr1);
+sol2 = ((-nr2)+(square(delta)))/(2*nr1);
+print("2 solutions ");
+print(sol1);
+print(" and ");
+print(sol2);
+}

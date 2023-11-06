@@ -1,0 +1,20 @@
+program {
+
+  nr1 (int), nr2 (int), nr3 (int);
+
+  read(nr1);
+  read(nr2);
+  read(nr3);
+
+  min (int) = nr1;
+
+  if min > nr2 {
+    min = nr2;
+  }
+  if min > nr3 {
+    min = nr3;
+  }
+
+  print(min);
+
+}
