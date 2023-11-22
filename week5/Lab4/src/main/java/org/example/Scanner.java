@@ -1,6 +1,7 @@
 package org.example;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
+import org.example.finite_automata.FiniteAutomata;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -95,15 +96,22 @@ public class Scanner {
 
     // Handle integer constants in the program
     private boolean handleIntConstant(){
-        var regexForIntConstant = Pattern.compile("^([+-]?[1-9][0-9]*|0)");
-        var matcher = regexForIntConstant.matcher(program.substring(index));
-        if (!matcher.find()) {
-            return false;
-        }
+
         if (Pattern.compile("^([+-]?[1-9][0-9]*|0)[a-zA-z_]").matcher(program.substring(index)).find()) {
             return false;
         }
-        var intConstant = matcher.group(1);
+
+        var fa = new FiniteAutomata("src/main/resources/int_constant.in");
+        var intConstant = fa.getNextAcceptedSubstring(program.substring(index));
+        if (Objects.equals(intConstant, null)) {
+            return false;
+        }
+        if ((intConstant.charAt(0) == '+' || intConstant.charAt(0) == '-')
+                && PIF.size() > 0
+                && (PIF.get(PIF.size() - 1).getLeft().equals("int const") || PIF.get(PIF.size() - 1).getLeft().equals("string const") || PIF.get(PIF.size() - 1).getLeft().equals("identifier"))) {
+            return false;
+        }
+
         index += intConstant.length();
         Pair<Integer, Integer> position;
         try {
@@ -128,12 +136,13 @@ public class Scanner {
 
     // Handle identifiers in the program
     private boolean handleIdentifier() {
-        var regexForIdentifier = Pattern.compile("^([a-zA-Z_][a-zA-Z0-9_]*)");
-        var matcher = regexForIdentifier.matcher(program.substring(index));
-        if (!matcher.find()) {
+
+        var fa = new FiniteAutomata("src/main/resources/identifier.in");
+        var identifier = fa.getNextAcceptedSubstring(program.substring(index));
+        if (identifier == null) {
             return false;
         }
-        var identifier = matcher.group(1);
+
         if (!checkIfValid(identifier, program.substring(index))) {
             return false;
         }
