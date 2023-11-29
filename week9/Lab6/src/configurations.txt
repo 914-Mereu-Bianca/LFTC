@@ -1,0 +1,14 @@
+       Configuration 
+Configuration{move = EXPAND, stateOfParsing = NORMAL_STATE, positionCurrentSymbol = 1, workingStack = [], inputStack = [S]} 
+Configuration{move = EXPAND, stateOfParsing = NORMAL_STATE, positionCurrentSymbol = 1, workingStack = [S-1], inputStack = [a, A]} 
+Configuration{move = MOMENTARY_INSUCCESS, stateOfParsing = BACK_STATE, positionCurrentSymbol = 1, workingStack = [S-1], inputStack = [a, A]} 
+Configuration{move = ANOTHER_TRY, stateOfParsing = NORMAL_STATE, positionCurrentSymbol = 1, workingStack = [S-2], inputStack = [B, a]} 
+Configuration{move = EXPAND, stateOfParsing = NORMAL_STATE, positionCurrentSymbol = 1, workingStack = [S-2, B-1], inputStack = [b, A, a]} 
+Configuration{move = ADVANCE, stateOfParsing = NORMAL_STATE, positionCurrentSymbol = 2, workingStack = [S-2, B-1, b], inputStack = [A, a]} 
+Configuration{move = EXPAND, stateOfParsing = NORMAL_STATE, positionCurrentSymbol = 2, workingStack = [S-2, B-1, b, A-1], inputStack = [a, C, b, a]} 
+Configuration{move = ADVANCE, stateOfParsing = NORMAL_STATE, positionCurrentSymbol = 3, workingStack = [S-2, B-1, b, A-1, a], inputStack = [C, b, a]} 
+Configuration{move = EXPAND, stateOfParsing = NORMAL_STATE, positionCurrentSymbol = 3, workingStack = [S-2, B-1, b, A-1, a, C-1], inputStack = [epsilon, b, a]} 
+Configuration{move = ADVANCE, stateOfParsing = NORMAL_STATE, positionCurrentSymbol = 3, workingStack = [S-2, B-1, b, A-1, a, C-1], inputStack = [b, a]} 
+Configuration{move = ADVANCE, stateOfParsing = NORMAL_STATE, positionCurrentSymbol = 4, workingStack = [S-2, B-1, b, A-1, a, C-1, b], inputStack = [a]} 
+Configuration{move = ADVANCE, stateOfParsing = NORMAL_STATE, positionCurrentSymbol = 5, workingStack = [S-2, B-1, b, A-1, a, C-1, b, a], inputStack = []} 
+Configuration{move = SUCCESS, stateOfParsing = FINAL_STATE, positionCurrentSymbol = 5, workingStack = [S-2, B-1, b, A-1, a, C-1, b, a], inputStack = []} 
