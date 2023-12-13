@@ -1,0 +1,20 @@
+5
+S
+A
+B
+C
+D
+3
+a
+b
+c
+8
+S -> a A
+S -> B a
+A -> a C b
+A -> D
+B -> b A
+B -> D
+C -> epsilon
+D -> c
+S

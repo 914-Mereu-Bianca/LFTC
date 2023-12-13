@@ -1,0 +1,273 @@
+31
+program
+statement
+declaration_statement
+assignment_statement
+if_statement
+for_statement
+while_statement
+read_statement
+write_statement
+variable_declaration_statement
+array_declaration_statement
+identifier_list
+type
+expression
+identifier
+int_expression
+char_expression
+string_expression
+integer
+string
+char
+condition
+relation
+range_list
+read_helper
+write_helper
+digit
+nz_digit
+integer_helper
+letter
+string_helper
+97
+main
+(
+)
+{
+}
+;
+:
+=
+[
+]
+,
++
+-
+*
+/
+%
+Integer
+Char
+String
+if
+else
+>
+>=
+<
+<=
+==
+!=
+while
+in
+range
+for
+read
+write
+>>
+<<
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+l
+m
+n
+o
+p
+q
+r
+s
+t
+u
+v
+w
+x
+y
+z
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+141
+program -> main ( ) { statement }
+statement -> declaration_statement ;
+statement -> assignment_statement ;
+statement -> if_statement ;
+statement -> for_statement ;
+statement -> while_statement ;
+statement -> read_statement ;
+statement -> write_statement ;
+declaration_statement -> variable_declaration_statement
+declaration_statement -> array_declaration_statement
+variable_declaration_statement -> identifier_list :  type ;
+variable_declaration_statement -> identifier_list :  type = expression ;
+array_declaration_statement -> identifier_list : type [ ] ;
+identifier_list -> identifier
+identifier_list -> identifier , identifier_list
+type -> Integer
+type -> Char
+type -> String
+expression -> int_expression
+expression -> char_expression
+expression -> string_expression
+int_expression -> integer
+int_expression -> int_expression + int_expression
+int_expression -> int_expression - int_expression
+int_expression -> int_expression * int_expression
+int_expression -> int_expression / int_expression
+int_expression -> int_expression % int_expression
+string_expression -> string
+string_expression -> string + string_expression
+string_expression -> char + string_expression
+char_expression -> char
+assignment_statement -> identifier = identifier ;
+assignment_statement -> identifier = expression ;
+if_statement -> if ( condition ) { statement }
+if_statement -> if ( condition ) { statement } else { statement }
+condition -> expression relation expression
+relation -> >
+relation -> >=
+relation -> <
+relation -> <=
+relation -> ==
+relation -> !=
+while_statement -> while ( condition ) { statement }
+for_statement -> for identifier in identifier { statement }
+for_statement -> for identifier in range ( range_list ) { statement }
+range_list -> integer
+range_list -> integer , integer
+range_list -> integer , integer, integer
+read_helper -> >> identifier ;
+read_helper -> >> identifier read_helper
+read_statement -> read read_helper ;
+write_helper -> << identifier ;
+write_helper -> << identifier write_helper
+write_statement -> write write_helper ;
+digit -> 0
+digit -> 1
+digit -> 2
+digit -> 3
+digit -> 4
+digit -> 5
+digit -> 6
+digit -> 7
+digit -> 8
+digit -> 9
+nz_digit -> 1
+nz_digit -> 2
+nz_digit -> 3
+nz_digit -> 4
+nz_digit -> 5
+nz_digit -> 6
+nz_digit -> 7
+nz_digit -> 8
+nz_digit -> 9
+integer -> 0
+integer_helper -> digit
+integer_helper -> digit integer_helper
+integer -> + nz_digit integer_helper
+integer -> - nz_digit integer_helper
+integer -> + nz_digit
+integer -> - nz_digit
+char -> letter
+char -> digit
+char -> epsilon
+letter -> a
+letter -> b
+letter -> c
+letter -> d
+letter -> e
+letter -> f
+letter -> g
+letter -> h
+letter -> i
+letter -> j
+letter -> k
+letter -> l
+letter -> m
+letter -> n
+letter -> o
+letter -> p
+letter -> q
+letter -> r
+letter -> s
+letter -> t
+letter -> u
+letter -> v
+letter -> w
+letter -> x
+letter -> y
+letter -> z
+letter -> A
+letter -> B
+letter -> C
+letter -> D
+letter -> E
+letter -> F
+letter -> G
+letter -> H
+letter -> I
+letter -> J
+letter -> K
+letter -> L
+letter -> M
+letter -> N
+letter -> O
+letter -> P
+letter -> Q
+letter -> R
+letter -> S
+letter -> T
+letter -> U
+letter -> V
+letter -> W
+letter -> X
+letter -> Y
+letter -> Z
+string_helper -> letter string_helper
+string_helper -> digit string_helper
+string_helper -> letter
+string_helper -> digit
+string_helper -> epsilon
+string -> string_helper
+program
